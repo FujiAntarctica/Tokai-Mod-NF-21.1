@@ -10,15 +10,15 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TokaiMod.MOD_ID);
 
     public static final DeferredItem<Item> COTTON_CANDY = ITEMS.register("cotton_candy",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.COTTON_CANDY)));
     public static final DeferredItem<Item> POPCORN = ITEMS.register("popcorn",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.POPCORN)));
     public static final DeferredItem<Item> HOT_DOG = ITEMS.register("hot_dog",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.HOT_DOG)));
     public static final DeferredItem<Item> SODA = ITEMS.register("soda",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.SODA)));
     public static final DeferredItem<Item> PEANUTS = ITEMS.register("peanuts",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PEANUTS)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
