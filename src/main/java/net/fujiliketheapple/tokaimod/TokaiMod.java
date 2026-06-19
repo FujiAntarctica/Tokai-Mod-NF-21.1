@@ -1,5 +1,6 @@
 package net.fujiliketheapple.tokaimod;
 
+import net.fujiliketheapple.tokaimod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -80,6 +81,8 @@ public class TokaiMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModItems.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -102,8 +105,12 @@ public class TokaiMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.COTTON_CANDY);
+            event.accept(ModItems.POPCORN);
+            event.accept(ModItems.HOT_DOG);
+            event.accept(ModItems.SODA);
+            event.accept(ModItems.PEANUTS);
         }
     }
 

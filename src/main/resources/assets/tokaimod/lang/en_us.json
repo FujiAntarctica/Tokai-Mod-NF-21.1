@@ -9,5 +9,10 @@
   "examplemod.configuration.items": "Item List",
   "examplemod.configuration.logDirtBlock": "Log Dirt Block",
   "examplemod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "examplemod.configuration.magicNumber": "Magic Number"
+  "examplemod.configuration.magicNumber": "Magic Number",
+  "item.tokaimod.cotton_candy": "Cotton Candy",
+  "item.tokaimod.popcorn": "Popcorn",
+  "item.tokaimod.hot_dog": "Hot Dog",
+  "item.tokaimod.soda": "Soda",
+  "item.tokaimod.peanuts": "Peanuts"
 }
